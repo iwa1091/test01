@@ -13,12 +13,20 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="#" class="header__logo">
-                FashionablyLate
-            </a>
-            <!-- 新規登録リンクを追加 -->
+            <div class="header__logo">
+            <!-- ロゴ -->
+            <a href="{{ url('/') }}">FashionablyLate</a>
+            </div>
+            <div class="header__menu">
+            <!-- ログインリンク -->
+            @if (Request::is('register'))
+                <a href="{{ route('login') }}" class="header-link">
+                    login
+                </a>
+            @endif
+            <!-- 新規登録リンク -->
             @if (Request::is('login'))
-            <a href="{{ route('register') }}" class="header__register-link">
+            <a href="{{ route('register') }}" class="header-link">
                 register
             </a>
             @endif
