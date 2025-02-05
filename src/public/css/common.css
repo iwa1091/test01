@@ -1,0 +1,52 @@
+/* ヘッダー共通スタイル */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #8B7969;
+    display: flex;
+    justify-content: center;
+    /* 中央に配置 */
+    align-items: center;
+    /* 垂直中央揃え */
+}
+
+.header__inner {
+    width: 90%;
+    /* フレックスアイテムの配置幅を調整 */
+    display: flex;
+    justify-content: space-between;
+    /* 左右に配置 */
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Inika';
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #8B7969;
+    margin: 0 auto;
+    /* 自動的に左右のマージンを追加して中央寄せ */
+}
+
+/* 新規登録リンクのスタイル */
+.header__register-link {
+    font-family: 'Inika';
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #8B7969;
+    padding: 5px 10px;
+    border: 1px solid #8B7969;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    margin-left: auto;
+    border: 1px solid #D9C6B5
+    /* 右寄せにするための左マージン */
+}

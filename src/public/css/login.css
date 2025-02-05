@@ -1,0 +1,87 @@
+
+
+/* ログインページ固有のスタイル */
+body {
+    width: 100%;
+    height: 100%;
+    background: #F1ECE7;
+    font-family: 'Inika', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.login-form__content form {
+    width: 750px;
+    height: 550px;
+    background: #FFFFFF;
+    border: 1px solid #C5B9B0;
+    border-radius: 10px;
+    padding: 50px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form__heading {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 35px;
+    color: #8B7969;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.form__group {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+
+.form__label--item {
+    display: block;
+    font-size: 25px;
+    color: #8B7969;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #F4F4F4;
+    border: 1px solid #C5B9B0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #BEB1A6;
+}
+
+.input-field::placeholder {
+    color: #BEB1A6;
+}
+
+.button--login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.button--login-text {
+    width: 160px;
+    height: 46px;
+    background: #82756A;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
