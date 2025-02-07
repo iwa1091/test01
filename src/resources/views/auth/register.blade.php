@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-<div class="register-form__content">
-    <div class="register-form__heading">
-        <h2>新規登録</h2>
+<div class=".form-container">
+    <div class="form__heading">
+        <h2>Register</h2>
     </div>
     <form action="{{ route('register') }}" method="post" class="form">
         @csrf
@@ -15,7 +15,7 @@
         <!-- 名前入力 -->
         <div class="form__group">
             <div class="form__group-title">
-                <label for="name" class="form__label--item">名前</label>
+                <label for="name" class="form__label--item">お名前</label>
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
