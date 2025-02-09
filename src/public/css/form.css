@@ -28,17 +28,19 @@ body {
 /* フォームグループ */
 .form__group {
     margin-bottom: 15px;
-}
-
-.form__group-title-content {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
 }
 
-.form__label--item {
+.form__group-title {
     font-weight: bold;
     color: #8B7969;
+    margin-right: 10px;
+    /* 少し空白を追加 */
+}
+
+.form__group-content {
+    flex-grow: 1;
 }
 
 /* 入力フィールド */
@@ -129,3 +131,10 @@ body {
     font-size: 14px;
     margin-top: 5px;
 }
+
+/* エラーメッセージのスタイル */
+.text-danger {
+    color: red;
+    margin-top: 5px;
+}
+

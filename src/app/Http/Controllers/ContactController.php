@@ -41,8 +41,9 @@ class ContactController extends Controller
         return redirect()->route('contacts.thanks');
     }
 
-    public function thanks()
+        public function thanks()
     {
         return view('contacts.thanks');
     }
+
 }

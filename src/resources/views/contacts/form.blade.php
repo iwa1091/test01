@@ -37,7 +37,7 @@
                 <div class="form__group-title-content">
                     <span class="gender-label">性別 ※</span>
                     <div class="form__group-content form__input--checkbox">
-                        <label><input type="radio" name="gender" value="male" {{ old('gender') == 'male' ? 'checked' : '' }}  required>男性</input></label>
+                        <label><input type="radio" name="gender" value="male" {{ old('gender', 'male') == 'male' ? 'checked' : '' }}  required>男性</input></label>
                         <label><input type="radio" name="gender" value="female" {{ old('gender') == 'female' ? 'checked' : '' }}  required>女性</input></label>
                         <label><input type="radio" name="gender" value="other" {{ old('gender') == 'other' ? 'checked' : '' }} required>その他</input></label>
                     </div>

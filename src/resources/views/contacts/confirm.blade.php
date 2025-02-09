@@ -7,7 +7,7 @@
 @section('content')
 <div class="contact-form__content">
     <div class="contact-form__heading">
-        <h2>確認画面</h2>
+        <h2>Confirm</h2>
     </div>
     <form action="{{ route('contacts.store') }}" method="post" class="form">
         @csrf
