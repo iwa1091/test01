@@ -8,13 +8,12 @@ body {
 
 /* フォームコンテナ */
 .contact-form__content {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #FFFFFF;
-    border: 1px solid #E0DFDE;
-    border-radius: 10px;
 }
+
 
 /* ヘッダー */
 .header-title {
@@ -22,7 +21,8 @@ body {
     font-weight: normal;
     color: #8B7969;
     text-align: center;
-    margin-bottom: 20px;
+    align-items: center;
+    margin: 30px auto;
 }
 
 /* フォームグループ */
@@ -36,7 +36,11 @@ body {
     font-weight: bold;
     color: #8B7969;
     margin-right: 10px;
-    /* 少し空白を追加 */
+}
+
+.label::after {
+    content: "※";
+    color: red;
 }
 
 .form__group-content {
@@ -110,7 +114,7 @@ body {
 
 /* ボタン */
 .button--confirm-text {
-    width: 100%;
+    width: 120px;
     padding: 10px;
     background-color: #8B7969;
     color: #FFFFFF;

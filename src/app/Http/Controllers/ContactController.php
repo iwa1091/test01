@@ -25,7 +25,7 @@ class ContactController extends Controller
     {
         $validated = $request->validated();
         $phone = $validated['phone_1'] . '-' . $validated['phone_2'] . '-' . $validated['phone_3'];
-
+         dd($validated);
         Contact::create([
             'last_name' => $validated['last_name'],
             'first_name' => $validated['first_name'],
@@ -37,7 +37,6 @@ class ContactController extends Controller
             'category_id' => $validated['category'],
             'detail' => $validated['detail'],
         ]);
-
         return redirect()->route('contacts.thanks');
     }
 

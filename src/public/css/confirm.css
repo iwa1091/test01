@@ -108,7 +108,7 @@ body {
 
 /* ボタン */
 .button--confirm-text {
-    width: 100%;
+    width: 50px;
     padding: 10px;
     background-color: #8B7969;
     color: #FFFFFF;
