@@ -45,6 +45,7 @@ class ContactController extends Controller
                 'detail'
             ])
         );
+        dd('Accessing contacts.thanks view');
 
         return view('contacts.thanks');
     }

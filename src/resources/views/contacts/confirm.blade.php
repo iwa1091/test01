@@ -9,7 +9,7 @@
     <div class="contact-form__heading">
         <h2>Confirm</h2>
     </div>
-    <form action="{{'contacts.store'}}" method="post" class="form">
+    <form action="{{ route('contacts.store') }}" method="post" class="form">
         @csrf
         <!-- 確認のために入力データを表示 -->
         <div class="form__group">
