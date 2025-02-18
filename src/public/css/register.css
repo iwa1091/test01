@@ -1,154 +1,51 @@
-/* 全体のスタイル */
-body {
-    margin: 0;
-    padding: 0;
-    background: #F1ECE7;
-    font-family: 'Inika', serif;
+.content {
+    background-color: #F1ECE7;
 }
 
-/* ヘッダー */
-.header {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: #FFFFFF;
-    border-bottom: 1px solid #8B7969;
+.register-form__inner {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 48px;
 }
 
-.header__inner {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header__logo a {
-    font-family: 'Inika';
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 52px;
-    color: #8B7969;
-    margin: 0 auto;
-}
-
-.header-link {
-    font-family: 'Inika';
-    font-style: normal;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
-    color: #8B7969;
-    padding: 5px 10px;
-    border: 1px solid #8B7969;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-    margin-left: auto;
-    border: 1px solid #D9C6B5;
-}
-
-
-.main .register-title {
-    font-size: 35px;
-    color: #8B7969;
-    margin-bottom: 40px;
-}
-
-/* フォームコンテナ */
-.form-container {
-    position: relative;
-    width: 736px;
-    padding: 40px;
-    background: #FFFFFF;
+.register-form__form {
+    padding: 64px 96px;
+    width: 40vw;
     border: 1px solid #C5B9B0;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 8px;
+    background-color: #FDFEFE;
 }
 
-.form__heading {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 400;
-    color: #a3a097;
-    margin-bottom: 20px;
-    /* 見出しの下に余白を追加 */
+@media screen and (max-width: 1200px) {
+    .register-form__form {
+        width: 60vw;
+    }
 }
 
-.form {
+.register-form__group {
+    margin-bottom: 32px;
+}
+
+.register-form__label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.register-form__input {
+    display: block;
+    padding: 8px 12px;
     width: 100%;
-    /* 親要素内での幅を設定 */
-    max-width: 600px;
-    /* 最大幅を設定 */
-    margin: 0 auto;
-    /* 左右中央揃え */
-    padding: 20px;
-    /* 内側に余白を追加 */
-    text-align: center;
-    background-color: #FFFFFF;
-    border: 1px solid #C5B9B0;
-    border-radius: 10px;
-}
-
-.form__group {
-    margin-bottom: 20px;
-}
-
-.form__group-title {
-    font-size: 25px;
-    color: #8B7969;
-    margin-bottom: 10px;
-    align-items: flex-start;
-}
-
-.form__group-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-.input-field {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    background: #F4F4F4;
-}
-
-.input-field.is-invalid {
-    border-color: red;
-}
-
-.form__error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.button--register {
-    text-align: center;
-}
-
-.button--register-text {
-    font-size: 20px;
-    color: #FFFFFF;
-    background-color: #82756A;
+    height: 48px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    font-family: serif;
 }
 
-.button--register-text:hover {
-    background-color: #6e645d;
+.register-form__error-message {
+    color: #FF9494;
+}
+
+.register-form__btn {
+    margin: 60px auto 0;
 }

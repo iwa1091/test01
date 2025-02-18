@@ -1,131 +1,39 @@
-/* 全体スタイル */
-body {
-    font-family: 'Inika', serif;
-    background-color: #F1ECE7;
-    margin: 0;
-    padding: 0;
+.confirm-form__inner {
+    margin: 32px auto 0;
+    width: 74%;
+    font-size: 16px;
 }
 
-/* フォームコンテナ */
-.contact-form__content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #FFFFFF;
+.confirm-form__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.confirm-form__row {
     border: 1px solid #E0DFDE;
-    border-radius: 10px;
 }
 
-/* ヘッダー */
-.header-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #8B7969;
-    text-align: center;
-    margin-bottom: 20px;
+.confirm-form__label,
+.confirm-form__data {
+    padding: 16px 48px;
 }
 
-/* フォームグループ */
-.form__group {
-    margin-bottom: 15px;
+.confirm-form__label {
+    width: calc(100% / 3);
+    background-color: #BAA899;
+    color: #FFF;
+    text-align: left;
+    font-weight: 400;
 }
 
-.form__group-title-content {
+.confirm-form__btn-inner {
     display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+    justify-content: center;
+    margin-top: 32px;
+
+    gap: 32px;
 }
 
-.form__label--item {
-    font-weight: bold;
-    color: #8B7969;
-}
-
-/* 入力フィールド */
-.input-field {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
-}
-
-.input-field::placeholder {
-    color: #C5B9B0;
-}
-
-.name-input-1,
-.name-input-2 {
-    width: calc(50% - 5px);
-}
-
-.name-input-1 {
-    margin-right: 10px;
-}
-
-.phone-input-1,
-.phone-input-2,
-.phone-input-3 {
-    width: calc(33.33% - 10px);
-}
-
-.phone-input-1 {
-    margin-right: 10px;
-}
-
-.phone-input-2 {
-    margin-right: 10px;
-}
-
-/* テキストエリア */
-.textarea-field {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
-}
-
-.textarea-field::placeholder {
-    color: #C5B9B0;
-}
-
-/* ドロップダウン */
-.dropdown-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
-}
-
-/* ボタン */
-.button--confirm-text {
-    width: 50px;
-    padding: 10px;
-    background-color: #8B7969;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button--confirm-text:hover {
-    background-color: #6D5B50;
-}
-
-/* エラーメッセージ */
-.form__error {
-    color: #FF0000;
-    font-size: 14px;
-    margin-top: 5px;
+.confirm-form__back-btn {
+    text-decoration: underline;
 }

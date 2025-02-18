@@ -1,144 +1,142 @@
-/* 全体スタイル */
-body {
-    font-family: 'Inika', serif;
-    background-color: #F1ECE7;
-    margin: 0;
-    padding: 0;
+.contact-form__inner {
+    margin: 32px auto 0;
+    width: 74%;
+    font-size: 16px;
 }
 
-/* フォームコンテナ */
-.contact-form__content {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #FFFFFF;
-}
-
-
-/* ヘッダー */
-.header-title {
-    font-size: 24px;
-    font-weight: normal;
-    color: #8B7969;
-    text-align: center;
+/* フォーム */
+.contact-form__group {
+    display: grid;
     align-items: center;
-    margin: 30px auto;
+    margin-top: 32px;
+
+    grid-template-columns: 1fr 2fr;
 }
 
-/* フォームグループ */
-.form__group {
-    margin-bottom: 15px;
+.contact-form__group:first-of-type {
+    margin-top: 0;
+}
+
+.contact-form__group:last-of-type {
+    align-items: flex-start;
+}
+
+.contact-form__required {
+    color: #FF9494;
+}
+
+.contact-form__input {
+    padding: 8px 16px;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+}
+
+.contact-form__name-inputs,
+.contact-form__tel-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+.contact-form__name-input {
+    width: 100%;
+}
+
+.contact-form__gender-inputs {
+    display: flex;
+    justify-content: left;
+}
+
+.contact-form__gender-option {
+    margin-right: 64px;
+}
+
+.contact-form__gender-input {
+    position: absolute;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.contact-form__gender-text {
     display: flex;
     align-items: center;
 }
 
-.form__group-title {
-    font-weight: bold;
-    color: #8B7969;
-    margin-right: 10px;
+.contact-form__gender-text::before {
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    content: '';
 }
 
-.label::after {
-    content: "※";
-    color: red;
+.contact-form__gender-input:checked+.contact-form__gender-text::before {
+    background: #8B7969;
 }
 
-.form__group-content {
-    flex-grow: 1;
+.contact-form__tel-input {
+    width: calc(100%/3);
+    text-align: center;
 }
 
-/* 入力フィールド */
-.input-field {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
+.contact-form__select-inner {
+    position: relative;
+}
+
+.contact-form__select-inner::after {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    width: 0;
+    height: 0;
+    border-top: 12px solid #BEB1A6;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    content: "";
+    transform: translateY(-50%);
+}
+
+.contact-form__select {
+    padding: 8px 16px;
+    width: 50%;
     background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
+    color: #BEB1A6;
 }
 
-.input-field::placeholder {
-    color: #C5B9B0;
-}
-
-.name-input-1,
-.name-input-2 {
-    width: calc(50% - 5px);
-}
-
-.name-input-1 {
-    margin-right: 10px;
-}
-
-.phone-input-1,
-.phone-input-2,
-.phone-input-3 {
-    width: calc(33.33% - 10px);
-}
-
-.phone-input-1 {
-    margin-right: 10px;
-}
-
-.phone-input-2 {
-    margin-right: 10px;
-}
-
-/* テキストエリア */
-.textarea-field {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
+.contact-form__textarea {
+    padding: 8px 16px;
+    height: 144px;
     background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
+    color: #BEB1A6;
 }
 
-.textarea-field::placeholder {
-    color: #C5B9B0;
-}
-
-/* ドロップダウン */
-.dropdown-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    background-color: #F4F4F4;
-    color: #8B7969;
-    font-size: 16px;
-}
-
-/* ボタン */
-.button--confirm-text {
-    width: 120px;
-    padding: 10px;
-    background-color: #8B7969;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button--confirm-text:hover {
-    background-color: #6D5B50;
+.contact-form__btn {
+    margin: 32px auto 0;
 }
 
 /* エラーメッセージ */
-.form__error {
-    color: #FF0000;
-    font-size: 14px;
-    margin-top: 5px;
+.contact-form__error-message {
+    margin-top: 8px;
+    color: #FF9494;
+
+    grid-column: 2;
 }
 
-/* エラーメッセージのスタイル */
-.text-danger {
-    color: red;
-    margin-top: 5px;
+.contact-form__name-group .contact-form__error-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
 }
 
+.contact-form__error-message-first-name,
+.contact-form__error-message-last-name {
+    width: 100%;
+}

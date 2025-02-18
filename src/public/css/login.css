@@ -1,87 +1,55 @@
+.content {
+    background-color: #F1ECE7;
+}
 
-
-/* ログインページ固有のスタイル */
-body {
-    width: 100%;
-    height: 100%;
-    background: #F1ECE7;
-    font-family: 'Inika', serif;
+.login-form__inner {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin: 0;
+    margin-top: 48px;
 }
 
-.login-form__content form {
-    width: 750px;
-    height: 550px;
-    background: #FFFFFF;
+.login-form__form {
+    padding: 64px 96px;
+    width: 40vw;
     border: 1px solid #C5B9B0;
-    border-radius: 10px;
-    padding: 50px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
+    border-radius: 8px;
+    background-color: #FDFEFE;
 }
 
-.login-form__heading {
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-    margin-bottom: 30px;
-    width: 100%;
-    font-size: 35px;
-    color: #8B7969;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
+@media screen and (max-width: 1200px) {
+    .login-form__form {
+        width: 60vw;
+    }
 }
 
-.form__group {
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 60px;
+.login-form__group {
+    margin-top: 32px;
 }
 
-.form__label--item {
+.login-form__group:first-of-type {
+    margin-top: 0;
+}
+
+.login-form__label {
     display: block;
-    font-size: 25px;
-    color: #8B7969;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.input-field {
+.login-form__input {
+    display: block;
+    padding: 8px 12px;
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    background: #F4F4F4;
-    border: 1px solid #C5B9B0;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #BEB1A6;
-}
-
-.input-field::placeholder {
-    color: #BEB1A6;
-}
-
-.button--login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px
-}
-
-.button--login-text {
-    width: 160px;
-    height: 46px;
-    background: #82756A;
-    color: #FFFFFF;
-    font-size: 20px;
+    height: 48px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    font-family: serif;
+}
+
+.login-form__error-message {
+    color: #FF9494;
+}
+
+.login-form__btn {
+    margin: 60px auto 0;
 }

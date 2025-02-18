@@ -1,66 +1,48 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/register.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/register.css')}}">
+@endsection
+
+@section('link')
+<a class="header__link" href="/login">login</a>
 @endsection
 
 @section('content')
-<div class=".form-container">
-    <div class="form__heading">
-        <h2>Register</h2>
-    </div>
-    <form action="{{ route('register') }}" method="post" class="form">
-        @csrf
-
-        <!-- 名前入力 -->
-        <div class="form__group">
-            <div class="form__group-title">
-                <label for="name" class="form__label--item">お名前</label>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input id="name" type="text" name="name" value="{{ old('name') }}" autofocus class="input-field @error('name') is-invalid @enderror">
-                    @error('name')
-                        <span class="form__error">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-        </div>
-
-        <!-- メールアドレス入力 -->
-        <div class="form__group">
-            <div class="form__group-title">
-                <label for="email" class="form__label--item">メールアドレス</label>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input id="email" type="email" name="email" value="{{ old('email') }}" autocomplete="email" class="input-field @error('email') is-invalid @enderror">
-                    @error('email')
-                        <span class="form__error">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-        </div>
-
-        <!-- パスワード入力 -->
-        <div class="form__group">
-            <div class="form__group-title">
-                <label for="password" class="form__label--item">パスワード</label>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input id="password" type="password" name="password" autocomplete="new-password" class="input-field @error('password') is-invalid @enderror">
-                    @error('password')
-                        <span class="form__error">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-        </div>
-
-        <!-- 登録ボタン -->
-        <div class="form__group button--register">
-            <button type="submit" class="button--register-text">登録</button>
-        </div>
+<div class="register-form">
+  <h2 class="register-form__heading content__heading">Register</h2>
+  <div class="register-form__inner">
+    <form class="register-form__form" action="/register" method="post">
+      @csrf
+      <div class="register-form__group">
+        <label class="register-form__label" for="name">お名前</label>
+        <input class="register-form__input" type="text" name="name" id="name" placeholder="例：山田 太郎">
+        <p class="register-form__error-message">
+          @error('name')
+          {{ $message }}
+          @enderror
+        </p>
+      </div>
+      <div class="register-form__group">
+        <label class="register-form__label" for="email">メールアドレス</label>
+        <input class="register-form__input" type="mail" name="email" id="email" placeholder="例：test@example.com">
+        <p class="register-form__error-message">
+          @error('email')
+          {{ $message }}
+          @enderror
+        </p>
+      </div>
+      <div class="register-form__group">
+        <label class="register-form__label" for="password">パスワード</label>
+        <input class="register-form__input" type="password" name="password" id="password" placeholder="例：coachtech1106">
+        <p class="register-form__error-message">
+          @error('password')
+          {{ $message }}
+          @enderror
+        </p>
+      </div>
+      <input class="register-form__btn btn" type="submit" value="登録">
     </form>
+  </div>
 </div>
-@endsection
+@endsection('content')

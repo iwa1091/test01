@@ -1,51 +1,39 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/login.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/login.css')}}">
+@endsection
+
+@section('link')
+<a class="header__link" href="/register">register</a>
 @endsection
 
 @section('content')
-<div class="login-form__content">
-    <div class="login-form__heading">
-        <h2>Login</h2>
-    </div>
-    <form action="{{ route('admin.index') }}" method="get" class="form">
-        @csrf
-
-        <!-- メールアドレス入力 -->
-        <div class="form__group">
-            <div class="form__group-title">
-                <label for="email" class="form__label--item">メールアドレス</label>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="input-field @error('email') is-invalid @enderror" placeholder="例: test@example.com">
-                    @error('email')
-                        <span class="form__error">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-        </div>
-
-        <!-- パスワード入力 -->
-        <div class="form__group">
-            <div class="form__group-title">
-                <label for="password" class="form__label--item">パスワード</label>
-            </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input id="password" type="password" name="password" required autocomplete="current-password" class="input-field @error('password') is-invalid @enderror" placeholder="例: test@example.com">
-                    @error('password')
-                        <span class="form__error">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
-        </div>
-
-        <!-- ログインボタン -->
-        <div class="form__group button--login">
-            <button type="submit" class="button--login-text">ログイン</button>
-        </div>
+<div class="login-form">
+  <h2 class="login-form__heading content__heading">Login</h2>
+  <div class="login-form__inner">
+    <form class="login-form__form" action="/login" method="post">
+      @csrf
+      <div class="login-form__group">
+        <label class="login-form__label" for="email">メールアドレス</label>
+        <input class="login-form__input" type="mail" name="email" id="email" placeholder="例: test@example.com">
+        <p class="register-form__error-message">
+          @error('email')
+          {{ $message }}
+          @enderror
+        </p>
+      </div>
+      <div class="login-form__group">
+        <label class="login-form__label" for="password">パスワード</label>
+        <input class="login-form__input" type="password" name="password" id="password" placeholder="例: coachtech1106">
+        <p>
+          @error('password')
+          {{ $message }}
+          @enderror
+        </p>
+      </div>
+      <input class="login-form__btn btn" type="submit" value="ログイン">
     </form>
+  </div>
 </div>
-@endsection
+@endsection('content')

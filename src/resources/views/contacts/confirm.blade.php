@@ -9,7 +9,7 @@
     <div class="contact-form__heading">
         <h2>Confirm</h2>
     </div>
-    <form action="/store" method="post" class="form">
+    <form action="{{'contacts.store'}}" method="post" class="form">
         @csrf
         <!-- 確認のために入力データを表示 -->
         <div class="form__group">
@@ -18,7 +18,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['last_name'] }} {{ $validated['first_name'] }}</p>
+                    <p>{{ $contacts['last_name'] }} {{ $contacts['first_name'] }}</p>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['gender'] }}</p>
+                    <p>{{ $contacts['gender'] }}</p>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['email'] }}</p>
+                    <p>{{ $contacts['email'] }}</p>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $phone }}</p>
+                    <p>{{ $contacts['tel'] }}</p>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['address'] }}</p>
+                    <p>{{ $contacts['address'] }}</p>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['building'] }}</p>
+                    <p>{{ $contacts['building'] }}</p>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['category'] }}</p>
+                    <p>{{ $category->content }}</p>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <p>{{ $validated['detail'] }}</p>
+                    <p>{{ $contacts['detail'] }}</p>
                 </div>
             </div>
         </div>
