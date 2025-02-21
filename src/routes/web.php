@@ -12,7 +12,7 @@ Route::post('/thanks', [ContactController::class, 'store'])->name('contacts.stor
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [ContactController::class, 'admin']);
-    Route::get('/search', [ContactController::class, 'search']);
+    Route::get('/search', [ContactController::class, 'search'])->name('search');
     Route::post('/delete', [ContactController::class, 'destroy']);
     Route::post('/export', [ContactController::class, 'export']);
 });
